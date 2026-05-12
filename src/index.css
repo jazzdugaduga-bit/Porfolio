@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-surface: #fef7ff;
+  --color-surface-dim: #ded7e4;
+  --color-surface-bright: #fef7ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f8f1fe;
+  --color-surface-container: #f3ebf8;
+  --color-surface-container-high: #ede5f3;
+  --color-surface-container-highest: #e7e0ed;
+  
+  --color-on-surface: #1d1a23;
+  --color-on-surface-variant: #494454;
+  
+  --color-primary: #6b38d4;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #8455ef;
+  --color-on-primary-container: #fffbff;
+  
+  --color-secondary: #5f5e5e;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e2dfde;
+  --color-on-secondary-container: #636262;
+  
+  --color-outline: #7b7486;
+  --color-outline-variant: #cbc3d7;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-surface text-on-surface font-sans;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-[1280px] mx-auto px-5 md:px-[64px];
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-on-primary px-10 py-3 rounded-full font-semibold transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+  }
+  
+  .btn-container {
+    @apply bg-primary-container text-on-primary-container px-8 py-3 rounded-full font-semibold transition-all hover:bg-primary active:scale-95;
+  }
+}
